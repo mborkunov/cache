@@ -26,7 +26,7 @@ public abstract class AbstractCache<K, V> implements Cache<K, V> {
             defaultProperties = new Properties();
             InputStream is = null;
             try {
-                is = new BufferedInputStream(getClass().getResourceAsStream("default.properties"));
+                is = new BufferedInputStream(getClass().getResourceAsStream("/default.properties"));
                 defaultProperties.load(is);
                 logger.info("default property file was successfully loaded");
             } catch (IOException e) {
